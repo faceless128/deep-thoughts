@@ -6,6 +6,7 @@ import { ADD_FRIEND } from '../utils/mutations';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import FriendList from '../components/FriendList';
 import Auth from '../utils/auth';
+import ThoughtForm from '../components/ThoughtForm';
 
 const Profile = () => {
   const { username: userParam } = useParams();
@@ -43,9 +44,11 @@ const Profile = () => {
         <h2 className="bg-dark text-secondary p-3 display-inline-block">
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
-        <button className="btn ml-auto" onClick={handleClick}>
-          Add Friend
-        </button>
+        {userParam && (
+          <button className="btn ml-auto" onClick={handleClick}>
+            Add Friend
+          </button>
+        )}
       </div>
 
       <div className="flex-row justify-space-between mb-3">
@@ -60,6 +63,7 @@ const Profile = () => {
           />
         </div>
       </div>
+      <div className="mb-3">{!userParam && <ThoughtForm />}</div>
     </div>
   );
 };
