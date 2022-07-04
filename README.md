@@ -28,4 +28,4 @@ Login and log out.
 View, post and react to Deep Thoughts.
 
 ## Demonstration
-Here is a [Live Demonstration](https://)
+Here is a [Live Demonstration](https://faceless-deep-thoughts.herokuapp.com)
