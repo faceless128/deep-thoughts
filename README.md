@@ -1,4 +1,4 @@
-# Deep Thouhgts
+# Deep Thoughts
 
 ## Description
 A Social Networking application using the MERN stack.
